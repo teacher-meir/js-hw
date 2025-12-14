@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+ol {
+    counter-reset: exercise;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    counter-increment: exercise;
+    margin: 10px 0;
+}
+
+li::before {
+    content: "תרגיל " counter(exercise) " - ";
+    color: #007BFF;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: #0a4b90;
+}
