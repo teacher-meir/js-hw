@@ -62,4 +62,63 @@ function calcBMI(height, weight) {
     `;
 }
 
-function testYourself() { }
+function testYourself() {
+    randomExercise();
+}
+
+function randomExercise() {
+    const num1 = randomRange(1, 10);
+    const num2 = randomRange(1, 10);
+    const operator = randomOperator();
+    let exercise = `${num1} ${operator} ${num2}`, answer;
+
+    switch (operator) {
+        case '+':
+            answer = num1 + num2;
+            break;
+        case '-':
+            answer = num1 - num2;
+            break;
+        case '*':
+            answer = num1 * num2;
+            break;
+        case '/':
+            answer = num1 / num2;
+            break;
+        case '^':
+            answer = num1 ** num2;
+            break;
+        case '√':
+            exercise = `${operator} ${num1}`;
+            answer = Math.sqrt(num1);
+            break;
+    }
+
+    answer = Math.trunc(answer);
+
+    document.body.innerHTML += `
+    <p class="exercise" onclick="alert(${answer} === +prompt('הקש תשובה'))">${exercise}</p>
+    `;
+}
+
+function randomOperator() {
+    const op = randomRange(0, 5);
+    switch (op) {
+        case 0:
+            return `+`;
+        case 1:
+            return `-`;
+        case 2:
+            return `*`;
+        case 3:
+            return `/`;
+        case 4:
+            return `^`;
+        case 5:
+            return `√`;
+    }
+}
+
+function randomRange(from, to) {
+    return Math.floor(Math.random() * (to - from + 1));
+}

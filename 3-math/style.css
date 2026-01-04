@@ -20,3 +20,9 @@ img {
 .bmi {
     font-family: Calibri, Arial, sans-serif;
 }
+
+.exercise {
+    direction: ltr;
+    color: darkblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
