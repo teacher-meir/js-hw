@@ -18,28 +18,28 @@ function drawTriangle(size) {
     `;
 }
 
-function drawSquareInput() {
+function drawSquareInput(color) {
     const size = +prompt('enter square size!');
 
     if (isNaN(size) || size <= 0) {
         alert('גודל צלע לא תקין')
     } else {
-        drawSquare(size);
+        drawSquare(size, color);
     }
 }
-function drawSquare(size) {
+function drawSquare(size, color) {
     const area = size ** 2;
 
     document.body.innerHTML += `
     <div class="square"
-        style="height: ${size}px; width: ${size}px;"
+        style="height: ${size}px; width: ${size}px; background: ${color};"
         onclick="alert('שטח הריבוע הוא ${area}')"></div>
     `;
 }
 
 function drawRandomImage(maxImg) {
     const imgIndex = Math.ceil(Math.random() * maxImg);
-    
+
     document.body.innerHTML += `
     <img src="images/dice/dice${imgIndex}.jpg" alt="קוביה עם ערך ${imgIndex}" />
     `;
