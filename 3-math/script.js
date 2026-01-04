@@ -1,6 +1,6 @@
 function drawTriangleInput() {
-    const size = +prompt('enter triangle size!');
-    const color = prompt('enter triangle color!');
+    const size = +prompt('הקש גודל צלע!');
+    const color = prompt('הקש צבע (מילה באנגלית או קוד HEX)!', 'palevioletred');
 
     if (isNaN(size) || size <= 0) {
         alert('גודל צלע לא תקין')
@@ -20,7 +20,7 @@ function drawTriangle(size, color) {
 }
 
 function drawSquareInput(color) {
-    const size = +prompt('enter square size!');
+    const size = +prompt('הקש גודל צלע!');
 
     if (isNaN(size) || size <= 0) {
         alert('גודל צלע לא תקין')
@@ -47,8 +47,8 @@ function drawRandomImage(name, maxImg) {
 }
 
 function calcBMIInput() {
-    const height = +prompt('enter your height (meters)!');
-    const weight = +prompt('enter your weight (kilos)!');
+    const height = +prompt('הקש את הגובה שלך (במטרים)!');
+    const weight = +prompt('הקש את המשקל שלך (בקילוגרמים)!');
 
     if (isNaN(height) || height <= 0 || isNaN(weight) || weight <= 0) {
         alert('גובה/משקל לא תקין')
@@ -105,7 +105,7 @@ function randomExercise() {
     answer = Math.trunc(answer);
 
     document.body.innerHTML += `
-    <p class="exercise" onclick="alert(${answer} === +prompt('הקש תשובה'))">${exercise}</p>
+    <p class="exercise" onclick="alert(${answer} === +prompt('הקש תשובה שלימה'))">${exercise}</p>
     `;
 }
 
