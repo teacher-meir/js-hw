@@ -39,6 +39,7 @@ function drawSquare(size) {
 
 function drawRandomImage(maxImg) {
     const imgIndex = Math.ceil(Math.random() * maxImg);
+    
     document.body.innerHTML += `
     <img src="images/dice/dice${imgIndex}.jpg" alt="קוביה עם ערך ${imgIndex}" />
     `;
