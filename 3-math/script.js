@@ -44,7 +44,22 @@ function drawRandomImage(maxImg) {
     `;
 }
 
-function calcBMIInput() { }
-function calcBMI(height, weight) { }
+function calcBMIInput() {
+    const height = +prompt('enter your height (meters)!');
+    const weight = +prompt('enter your weight (kilos)!');
+
+    if (isNaN(height) || height <= 0 || isNaN(weight) || weight <= 0) {
+        alert('גובה/משקל לא תקין')
+    } else {
+        calcBMI(height, weight);
+    }
+}
+function calcBMI(height, weight) {
+    const bmi = Math.round(weight / height ** 2);
+
+    document.body.innerHTML += `
+    <p class="bmi" style="color: ${bmi >= 18 && bmi <= 25 ? 'darkgreen' : 'darkred'}">ה-BMI שלך הוא ${bmi}</p>
+    `;
+}
 
 function testYourself() { }
