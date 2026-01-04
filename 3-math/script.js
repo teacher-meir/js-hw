@@ -57,7 +57,8 @@ function calcBMIInput() {
     }
 }
 function calcBMI(height, weight) {
-    const bmi = Math.round(weight / height ** 2);
+    let bmi = weight / height ** 2;
+    bmi = Math.round(bmi * 100) / 100;
 
     document.body.innerHTML += `
     <p class="bmi" style="color: ${bmi >= 18 && bmi <= 25 ? 'darkgreen' : 'darkred'}">ה-BMI שלך הוא ${bmi}</p>
