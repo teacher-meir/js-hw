@@ -1,6 +1,11 @@
 function drawTriangleInput() {
     const size = +prompt('enter triangle size!');
-    drawTriangle(size);
+
+    if (isNaN(size) || size <= 0) {
+        alert('גודל צלע לא תקין')
+    } else {
+        drawTriangle(size);
+    }
 }
 function drawTriangle(size) {
     document.body.innerHTML += `<div class="triangle" style="border-width: ${size}px;"></div>`;
