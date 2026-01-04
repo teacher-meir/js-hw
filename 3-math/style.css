@@ -1,0 +1,6 @@
+.triangle {
+    border-style: solid;
+    border-color: transparent transparent palevioletred palevioletred;
+    width: 0;
+    margin: 10px auto;
+}
