@@ -8,7 +8,14 @@ function drawTriangleInput() {
     }
 }
 function drawTriangle(size) {
-    document.body.innerHTML += `<div class="triangle" style="border-width: ${size}px;"></div>`;
+    const yeter = Math.sqrt(size ** 2 + size ** 2);
+    const perimeter = 2 * size + yeter;
+
+    document.body.innerHTML += `
+    <div class="triangle"
+        style="border-width: ${size}px;"
+        onclick="alert('היקף המשולש הוא ${perimeter}')"></div>
+    `;
 }
 
 function drawSquareInput() { }
