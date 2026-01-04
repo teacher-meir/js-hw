@@ -15,6 +15,13 @@ img {
     margin: 10px auto;
 }
 
+button img {
+    margin: 0;
+    display: inline-block;
+    height: 1.35em;
+    vertical-align: middle;
+}
+
 .bmi {
     font-family: Calibri, Arial, sans-serif;
 }

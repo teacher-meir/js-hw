@@ -38,11 +38,11 @@ function drawSquare(size, color) {
     `;
 }
 
-function drawRandomImage(maxImg) {
+function drawRandomImage(name, maxImg) {
     const imgIndex = Math.ceil(Math.random() * maxImg);
 
     document.body.innerHTML += `
-    <img src="images/dice/dice${imgIndex}.jpg" alt="קוביה עם ערך ${imgIndex}" />
+    <img src="images/${name}/${name}${imgIndex}.png" alt="${name} no ${imgIndex}" />
     `;
 }
 
