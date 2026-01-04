@@ -66,7 +66,12 @@ function calcBMI(height, weight) {
 }
 
 function testYourself() {
-    randomExercise();
+    const isExample = confirm('האם אתה רוצה תרגיל דוגמא (אישור) או מבחן שלם (ביטול)?');
+    const numExercises = isExample ? 1 : 5;
+
+    for (let i = 0; i < numExercises; i++) {
+        randomExercise();
+    }
 }
 
 function randomExercise() {
