@@ -4,3 +4,9 @@
     width: 0;
     margin: 10px auto;
 }
+
+.square {
+    border: 5px solid palevioletred;
+    background-color: powderblue;
+    margin: 10px auto;
+}

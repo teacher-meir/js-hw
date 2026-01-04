@@ -18,8 +18,24 @@ function drawTriangle(size) {
     `;
 }
 
-function drawSquareInput() { }
-function drawSquare(size) { }
+function drawSquareInput() {
+    const size = +prompt('enter square size!');
+
+    if (isNaN(size) || size <= 0) {
+        alert('גודל צלע לא תקין')
+    } else {
+        drawSquare(size);
+    }
+}
+function drawSquare(size) {
+    const area = size ** 2;
+
+    document.body.innerHTML += `
+    <div class="square"
+        style="height: ${size}px; width: ${size}px;"
+        onclick="alert('שטח הריבוע הוא ${area}')"></div>
+    `;
+}
 
 function randomImage() { }
 
